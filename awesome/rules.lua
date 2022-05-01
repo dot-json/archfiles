@@ -63,5 +63,8 @@ awful.rules.rules = {
     properties = { tag = "" } },
 
     { rule = { class = "kitty" },
-    properties = { tag = ""} }
+    properties = { tag = ""} },
+
+    { rule = { class = "Code" },
+    properties = { tag = ""} }
 }

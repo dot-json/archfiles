@@ -14,13 +14,13 @@ local theme = {}
 gtable.crush(theme, default_theme)
 
 theme.useless_gap = dpi(6)
-theme.border_width = 2 
+theme.border_width = 1 
 theme.border_normal = colors.primary
 theme.border_focus = colors.accent
 theme.font = "JetBrains Mono Nerd Font Bold 14"
-theme.wibar_height = dpi(40)
-theme.taglist_font = "Font Awesome 6 Free Solid 15"
-theme.taglist_spacing = dpi(11)
+theme.wibar_height = dpi(46)
+theme.taglist_font = "Font Awesome 6 Free Solid 16"
+theme.taglist_spacing = dpi(12)
 theme.taglist_fg_empty = colors.inactive
 theme.taglist_fg_occupied = colors.inactive
 theme.taglist_fg_focus = colors.text
