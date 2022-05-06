@@ -28,5 +28,14 @@ return gears.table.join(
         description = "run prompt", 
         group = "launcher"
       }
+    ),
+
+    awful.key(
+      { modkey }, "Print",
+      function () awful.spawn.with_shell(apps.flameshotFull) end,
+      {
+        description = "full screenshot", 
+        group = "launcher"
+      }
     )
 )

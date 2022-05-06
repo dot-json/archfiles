@@ -28,6 +28,15 @@ local keys = gears.table.join(
         description = "quit awesome", 
         group = "awesome"
       }
+    ),
+
+    awful.key(
+      { modkey, "Shift", "Control"   }, "End", 
+      function () awful.spawn.with_shell("shutdown now") end,
+      {
+        description = "shutdown", 
+        group = "awesome"
+      }
     )
 )
 
