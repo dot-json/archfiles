@@ -52,14 +52,17 @@ awful.rules.rules = {
     -- Tag mappings
     { rule = { class = "firefox" },
     properties = { tag = "" } },
+
+	{ rule = { class = "Chromium" },
+	properties = { tag = "" } },
         
     { rule = { class = "discord" },
     properties = { tag = "" } },
 
-    { rule = { class = "Nautilus" },
+    { rule = { class = "Pcmanfm" },
     properties = { tag = "" } },
 
-    { rule = { class = "Spotify" },
+    { rule = { class = "[Ss]potify" },
     properties = { tag = "" } },
 
     { rule = { class = "kitty" },

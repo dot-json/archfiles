@@ -9,8 +9,8 @@ local separator = require("ui.bar.components.separator")
 local create_taglist = require("ui.bar.components.taglist")
 --local date = wibox.widget.textclock(" %b %d, %Y")
 --local clock = wibox.widget.textclock(" %I:%M %p")
-local date = wibox.widget.textclock("%b %d, %Y")
-local clock = wibox.widget.textclock("| %I:%M %p")
+local date = wibox.widget.textclock("/ %b %d, %Y")
+local clock = wibox.widget.textclock("/ %I:%M %p /")
 
 awful.screen.connect_for_each_screen(function(s)
 
@@ -64,7 +64,7 @@ awful.screen.connect_for_each_screen(function(s)
                   {
                     layout = wibox.container.margin,
                     left = beautiful.taglist_spacing,
-                    right = beautiful.taglist_spacing-7,
+                    right = beautiful.taglist_spacing-10,
                     date 
                   },
                 }
