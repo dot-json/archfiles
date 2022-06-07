@@ -69,5 +69,8 @@ awful.rules.rules = {
     properties = { tag = ""} },
 
     { rule = { class = "Code" },
+    properties = { tag = ""} },
+
+    { rule = { class = "jetbrains-clion" },
     properties = { tag = ""} }
 }

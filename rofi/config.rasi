@@ -1,20 +1,20 @@
 configuration {
-  display-drun: "Apps:";
-  display-window: "Windows:";
+  display-drun: "Run:";
+  display-window: "Window:";
   drun-display-format: "{name}";
   disable-history: false;
   font: "JetBrainsMono Nerd Font Medium 12";
-  modi: "window,run,drun";
+  modi: "window,drun";
 }
 
 @theme "/dev/null"
 
 * {
-  bg: #11121D;
-  bg-alt: #444b6a;
+  bg: #111111;
+  bg-alt: #111111;
 
-  fg: #FFFFFF;
-  fg-alt: #787c99;
+  fg: #e5e5e5;
+  fg-alt: #9a9a9a;
 
   background-color: @bg;
   
@@ -26,6 +26,8 @@ configuration {
 
 window {
   width: 30%;
+  border: 1;
+  border-color: #202020;
 }
 
 element {
@@ -51,6 +53,7 @@ entry {
   background-color: @bg-alt;
   padding: 12;
   text-color: @fg;
+  font: "JetBrains Mono Bold 15";
 }
 
 inputbar {
@@ -74,4 +77,5 @@ prompt {
   enabled: true;
   padding: 12 0 0 12;
   text-color: @fg;
+  font: "JetBrains Mono Bold 15";
 }
