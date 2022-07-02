@@ -71,6 +71,12 @@ awful.rules.rules = {
     { rule = { class = "Code" },
     properties = { tag = ""} },
 
+    { rule = { class = "neovide" },
+    properties = { tag = ""} },
+
+    { rule = { class = "Zathura" },
+    properties = { tag = ""} },
+
     { rule = { class = "jetbrains-clion" },
     properties = { tag = ""} }
 }

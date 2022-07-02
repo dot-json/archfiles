@@ -3,6 +3,7 @@ local gears = require("gears")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
 local keys = gears.table.join(
+
     awful.key(
       { modkey }, "e",
       hotkeys_popup.show_help,

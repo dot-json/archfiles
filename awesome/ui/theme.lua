@@ -1,3 +1,4 @@
+local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local filesystem = require("gears.filesystem")
 local gears = require("gears")
@@ -13,10 +14,12 @@ local theme = {}
 
 gtable.crush(theme, default_theme)
 
+icon_path = os.getenv("HOME") .. "/.config/awesome/ui/icons"
+
 theme.useless_gap = dpi(6)
 theme.border_width = 1 
-theme.border_normal = colors.primary
-theme.border_focus = colors.accent
+theme.border_normal = colors.border
+theme.border_focus = colors.border_fc
 --theme.font = "JetBrains Mono Nerd Font Bold 14"
 theme.font = "Roboto Bold 15"
 theme.wibar_height = dpi(47)
@@ -52,5 +55,24 @@ theme.hotkeys_label_fg = colors.text
 theme.hotkeys_fg = colors.inactive
 theme.hotkeys_modifiers_fg = colors.accent
 
+--menu
+theme.menu_height = dpi(30)
+theme.menu_width = dpi(240)
+theme.menu_font = "JetBrains Mono Nerd Font Bold 15" 
+theme.menu_bg_normal = colors.primary
+theme.menu_fg_normal = colors.inactive
+theme.menu_border_color = colors.border_fc
+
+theme.menu_submenu_icon = icon_path.."/right.png"
+theme.term_icon = icon_path.."/terminal.png"
+theme.firefox_icon = icon_path.."/firefox1.png"
+theme.discord_icon = icon_path.."/discord.png"
+theme.files_icon = icon_path.."/folder.png"
+theme.sys_icon = icon_path.."/pc.png"
+theme.awm_icon = icon_path.."/awm.png"
+theme.spotify_icon = icon_path.."/spotify.png"
+theme.restart_icon = icon_path.."/restart.png"
+theme.shutdown_icon = icon_path.."/shd.png"
+theme.quit_icon = icon_path.."/quit.png"
 
 return theme
