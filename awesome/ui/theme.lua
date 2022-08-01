@@ -56,12 +56,14 @@ theme.hotkeys_fg = colors.inactive
 theme.hotkeys_modifiers_fg = colors.accent
 
 --menu
-theme.menu_height = dpi(30)
+theme.menu_height = dpi(40)
 theme.menu_width = dpi(240)
 theme.menu_font = "JetBrains Mono Nerd Font Bold 15" 
 theme.menu_bg_normal = colors.primary
+theme.menu_bg_focus = colors.bg_focus
 theme.menu_fg_normal = colors.inactive
-theme.menu_border_color = colors.border_fc
+theme.menu_fg_focus = colors.fg_focus
+theme.menu_border_color = colors.border_menu
 
 theme.menu_submenu_icon = icon_path.."/right.png"
 theme.term_icon = icon_path.."/terminal.png"
