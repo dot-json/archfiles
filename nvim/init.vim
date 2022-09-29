@@ -8,10 +8,8 @@
 
 call plug#begin()
 
-Plug 'https://github.com/vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-Plug 'https://github.com/preservim/nerdtree'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
@@ -20,18 +18,16 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-eslint'
 Plug 'neoclide/coc-prettier'
+Plug 'shaunsingh/oxocarbon.nvim', {'branch': 'main'}
+Plug 'akai54/2077.nvim'
 
 call plug#end()
 
-let g:airline_theme='deus'
+lua << END
+require('lualine').setup()
+END
 
-let g:material_theme_style = 'darker'
-colorscheme material
-
-let g:netrw_liststyle=3
-let g:netrw_keepdir=0
-let g:NERDTreeChDirMode = 1
-let g:NERDTreeMinimalUI=1
+colorscheme 2077
 
 let g:coc_global_extensions = [
   \ 'coc-tsserver'
@@ -45,11 +41,9 @@ if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
   let g:coc_global_extensions += ['coc-eslint']
 endif
 
-highlight Normal guibg=#141414
-highlight LineNr guifg=#8a8a8a
-highlight LineNr ctermfg=DarkGrey
-
-nmap <C-f> :NERDTreeToggle<CR>
+highlight Normal guibg=#090909
+"highlight LineNr guibg=#090909
+"highlight LineNr guifg=#777B81
 
 nmap <c-c> "+y
 vmap <c-c> "+y
