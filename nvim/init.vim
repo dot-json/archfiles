@@ -52,3 +52,5 @@ inoremap <c-v> <c-r>+
 cnoremap <c-v> <c-r>+
 " use <c-r> to insert original character without triggering things like auto-pairs
 inoremap <c-r> <c-v>
+inoremap <silent><expr> <tab> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<TAB>"
+inoremap <silent><expr> <cr> "\<c-g>u\<CR>"

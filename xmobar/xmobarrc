@@ -1,0 +1,52 @@
+Config { 
+
+   -- appearance
+     font =         "xft:JetBrains Mono:size=13:bold:antialias=true"
+   , additionalFonts = [ "xft:JetBrainsMono Nerd Font:size=22:antialias=true",
+					     "xft:Source Code Pro:size=12:bold:antialias=true"
+					   ]
+   , textOffset =   -1 
+   , bgColor =      "#060606"
+   , fgColor =      "#e7e7e7"
+   , position =     TopH 32
+   , border =       BottomB
+   , borderColor =  "#ff003d"
+   , borderWidth =  2
+
+   -- layout
+   , sepChar =  "%"   -- delineator between plugin names and straight text
+   , alignSep = "}{"  -- separator between left-right alignment
+   , template = " <fn=1></fn> <fc=#646464>|</fc> %StdinReader% }{ %cpu% <fc=#949494>/</fc> %memory% <fc=#949494>/</fc> %date%  "
+
+   -- general behavior
+   , lowerOnStart =     True    -- send to bottom of window stack on start
+   , hideOnStart =      False   -- start with window unmapped (hidden)
+   , allDesktops =      True    -- show on all desktops
+   , overrideRedirect = True    -- set the Override Redirect flag (Xlib)
+   , pickBroadest =     False   -- choose widest display (multi-monitor)
+   , persistent =       True    -- enable/disable hiding (True = disabled)
+
+   , commands = [ 
+        
+		  Run Cpu [ "-t", "cpu: <total>%",
+					"-L", "3",
+		            "-H", "50",
+		            "--normal", "#e7e7e7",
+		            "--high","#e7e7e7"
+		          ] 10
+
+        -- memory usage monitor
+        , Run Memory         [ "--template" ,"mem: <usedratio>%"
+                             , "--Low"      , "20"        -- units: %
+                             , "--High"     , "90"        -- units: %
+                             , "--low"      , "#e7e7e7"
+                             , "--normal"   , "#e7e7e7"
+                             , "--high"     , "#e7e7e7"
+                             ] 10
+
+        -- time and date indicator 
+        --   (%F = y-m-d date, %T = h:m:s time)
+        , Run Date           "<fc=#e7e7e7>%b %d, %Y <fc=#949494>-</fc> %I:%M %P</fc>" "date" 10
+		, Run StdinReader
+	]
+   }
